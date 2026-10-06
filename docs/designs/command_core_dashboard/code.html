@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#0f131d","surface-container":"#1b1f2a","on-secondary-fixed-variant":"#6900b3","on-error-container":"#ffdad6","surface-bright":"#353944","on-tertiary-container":"#006d43","on-tertiary":"#003920","on-tertiary-fixed-variant":"#005231","primary":"#dbfcff","on-surface-variant":"#b9cacb","tertiary-fixed":"#52ffac","tertiary-fixed-dim":"#00e290","surface-tint":"#00dbe9","error-container":"#93000a","surface-container-high":"#262a35","on-error":"#690005","inverse-surface":"#dfe2f1","surface-dim":"#0f131d","primary-fixed":"#7df4ff","secondary-fixed-dim":"#ddb7ff","on-primary":"#00363a","surface-container-lowest":"#0a0e18","on-secondary-fixed":"#2c0051","tertiary-container":"#00f89e","on-secondary":"#490080","on-background":"#dfe2f1","on-primary-container":"#006970","secondary-container":"#6f00be","outline-variant":"#3b494b","background":"#0f131d","surface-container-low":"#171b26","secondary-fixed":"#f0dbff","on-secondary-container":"#d6a9ff","primary-container":"#00f0ff","on-tertiary-fixed":"#002111","surface-container-highest":"#313540","surface-variant":"#313540","inverse-on-surface":"#2c303b","primary-fixed-dim":"#00dbe9","secondary":"#ddb7ff","tertiary":"#daffe4","error":"#ffb4ab","on-surface":"#dfe2f1","outline":"#849495","on-primary-fixed-variant":"#004f54","inverse-primary":"#006970","on-primary-fixed":"#002022"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-md":"1rem","margin-md":"1.5rem","gutter-lg":"1.5rem","margin-lg":"2.5rem","gutter":"1rem","margin":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"code-md":["JetBrains Mono"],"body-sm":["Geist"],"display-hero":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Geist"],"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"body-md":["Geist"],"label-mono":["JetBrains Mono"]},fontSize:{"code-md":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"400"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-mono":["11px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container"><div class="fixed inset-0 pointer-events-none bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] z-0"></div><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="RepoMind-X Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X_gJ5lmWHqP2UBYELXIWwDKBb0HI0jMY9aMnEpSA3yyQeXGG6VUNvySRzYoYCBB2XUsd1IGJvGrE7O6R_sdemlhKyK0-EIKWbfZLD2Q_-lJieq4xP12LIOdYz3cm8FuaSuMY0iRqrRNTtqGvCkDu3Q4UxKr3UO2C0AQ-tzCs3MKhHrS7kAhP8VthGkiNGS1Vpj3Wnk7HNKrJkqYQl_PCsOsyQ-E-z-QW03ldG5ZEmhechZnMKnm24Y"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-wider text-primary font-semibold">REPOMIND // X</span><span class="font-label-mono text-label-mono text-outline-variant tracking-widest">v4.8.2 COCKPIT</span></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-mono text-label-mono text-tertiary-container uppercase">SYS: ONLINE</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-full bg-surface-container-low/70 border border-outline-variant/20" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,240,255,0.2)]"><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="3d-galaxy" href="#">3D Galaxy</a><a aria-current="page" class="px-space-md py-1.5 rounded-full transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,240,255,0.2)]" data-path="command-core" href="#">Command Core</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="discover-issues" href="#">Discover Issues</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="ai-multi-agent" href="#">AI Multi-Agent</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="mission-plan" href="#">Mission Plan</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="pr-inspection" href="#">PR Inspection</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="dev-passport" href="#">Dev Passport</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="hidden md:flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary-fixed-dim/60 text-on-surface-variant hover:text-primary transition-all shadow-sm" onclick="document.getElementById('hud-command-palette').classList.remove('hidden')"><span class="material-symbols-outlined text-base">terminal</span><span class="font-code-md text-code-md">Prompt / Search</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-mono text-label-mono text-primary">⌘K</span></button><div class="hidden 2xl:flex items-center gap-space-md px-space-md py-1 rounded-lg bg-surface-container-low border border-outline-variant/30 font-label-mono text-label-mono"><div class="flex items-center gap-1 text-on-surface-variant">LATENCY: <span class="text-tertiary-container">12MS</span></div><div class="h-3 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-1 text-on-surface-variant">TARGET: <span class="text-primary-container">4 PRS</span></div></div><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-fixed ring-2 ring-surface-container-lowest animate-pulse"></span></div><div class="relative p-0.5 rounded-full bg-gradient-to-r from-primary-container via-surface-tint to-secondary-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover block bg-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQGYK3a5u2LLbTuHZDkB9BqDUkS5-LljlFZGyYsisgCp_BMp7eGT3B48-D6WqexqgQuw4edzsdCBSCppl_Ms7YyBSfBDSkglyppezlRoIXcUkTQifkIgnD3AAPkKtJrCZw6jOZt4P0DHqIhNUNEM9Ey9Pb4EhoGKWWuhh9kd18ZDp5KilZwZ10CR9yzylLp_mBbnF4F-nvCmbUNKCR3h4QKFVpWXGbdgJGAaehz8aumCVkn-G8Sw"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest/90 backdrop-blur-xl border-r border-outline-variant/20 z-40 flex flex-col justify-between p-space-md hidden lg:flex"><div class="space-y-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low/60 border border-outline-variant/30"><div class="flex items-center justify-between font-label-mono text-label-mono text-outline-variant mb-space-xs"><span>ACTIVE SYNAPSE</span><span class="text-tertiary-container">AGENT CLUSTER #9</span></div><div class="flex items-center gap-space-xs"><div class="h-1.5 flex-1 rounded bg-surface-container-highest overflow-hidden"><div class="h-full w-3/4 bg-primary-container animate-pulse"></div></div><span class="font-code-md text-code-md text-primary">75% LOAD</span></div></div><div class="space-y-1"><span class="px-space-sm font-label-mono text-label-mono text-outline uppercase tracking-wider">Telemetry Rails</span><nav class="space-y-0.5 mt-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold border-l-2 border-primary-container"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-surface-container-high text-primary font-semibold border-l-2 border-primary-container" data-path="command-core" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">terminal</span>Live Stream</span><span class="font-label-mono text-label-mono text-primary">LIVE</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="ai-multi-agent" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">smart_toy</span>Agent Fleet</span><span class="font-label-mono text-label-mono text-tertiary-container">14 ACT</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="pr-inspection" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">merge</span>Triage Matrix</span><span class="font-label-mono text-label-mono text-error">2 CONFL</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="3d-galaxy" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">hub</span>Vector Graph</span><span class="font-label-mono text-label-mono text-secondary-fixed-dim">NODE V4</span></a></nav></div></div><div class="p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 space-y-space-xs"><div class="flex items-center justify-between font-label-mono text-label-mono text-on-surface-variant"><span>NODE KERNEL</span><span class="text-primary">STABLE</span></div><div class="text-body-sm font-body-sm text-outline">Synced to upstream repo 42s ago.</div></div></aside><div class="lg:pl-72 min-h-screen flex flex-col relative z-10"><main class="flex-1 pt-16 bg-surface/50 w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full relative">
+<!-- Subtle Spatial Blueprint Ambient Background -->
+<div class="absolute inset-0 pointer-events-none -z-10 flex items-center justify-center overflow-hidden">
+<div class="w-[900px] h-[900px] rounded-full bg-gradient-to-tr from-primary-container/5 via-secondary-container/5 to-tertiary-container/5 blur-3xl opacity-60"></div>
+<div class="absolute w-[640px] h-[640px] rounded-full border border-primary/5 [background:radial-gradient(circle_at_center,transparent_45%,rgba(0,240,255,0.03)_100%)]"></div>
+</div>
+<!-- Breadcrumb & Mission Header Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span class="font-label-mono text-label-mono text-tertiary-container tracking-wider">HUD CORE // AUTONOMOUS MODE</span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">LOC: SECTOR_07::OSS_CLUSTER</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-on-surface-variant bg-surface-container-low px-space-md py-1 rounded-lg">
+<span>QUANTUM SYNC:</span>
+<span class="text-primary-container font-code-md">99.84%</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-on-surface-variant bg-surface-container-low px-space-md py-1 rounded-lg">
+<span>RADAR SWEEP:</span>
+<span class="text-tertiary-fixed font-code-md">0.4 SEC</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-mono text-label-mono transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">tune</span> CONFIG
+      </button>
+</div>
+</div>
+<!-- SPATIAL BENTO MATRIX WITH CENTRAL HUD -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg relative">
+<!-- Vector Junction Connecting Overlay (Desktop Only) -->
+<svg class="hidden xl:block absolute inset-0 w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
+<!-- Top-Left to Core -->
+<path class="text-primary-container/20" d="M 380 180 L 490 270" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle class="fill-primary-container/70" cx="380" cy="180" r="3"></circle>
+<!-- Top-Right to Core -->
+<path class="text-secondary-fixed-dim/20" d="M 780 180 L 670 270" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle class="fill-secondary-container/70" cx="780" cy="180" r="3"></circle>
+<!-- Bottom-Left to Core -->
+<path class="text-primary-fixed-dim/20" d="M 380 430 L 490 350" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle class="fill-primary-fixed-dim/70" cx="380" cy="430" r="3"></circle>
+<!-- Bottom-Right to Core -->
+<path class="text-tertiary-container/20" d="M 780 430 L 670 350" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<circle class="fill-tertiary-container/70" cx="780" cy="430" r="3"></circle>
+</svg>
+<!-- ==============================================
+         PANEL 1 (TOP-LEFT): RECOMMENDED ISSUE BRIEFING
+         ============================================== -->
+<div class="xl:col-span-4 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low shadow-xl backdrop-blur-xl relative group z-10 transition-all duration-300 hover:bg-surface-container">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-primary-container rounded-sm"></span>
+<span class="font-label-mono text-label-mono text-primary tracking-wider uppercase">Recommended Issue Briefing</span>
+</div>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container-high text-tertiary-container">HIGH CONFIDENCE</span>
+</div>
+<div class="space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm text-outline font-label-mono text-label-mono">
+<span class="text-primary">OpenTelemetry / core</span>
+<span>•</span>
+<span class="text-on-surface-variant">ISSUE #184</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">
+            Fix authentication timeout in token refresh worker
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            The refresh worker hangs when upstream identity broker returns HTTP 429 backoff header, leading to deadlock in async event loop.
+          </p>
+</div>
+<!-- Tags & Telemetry pills -->
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-md text-code-md text-primary-fixed">Python 3.12</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-md text-code-md text-error">Bug: Race Condition</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-code-md text-code-md text-tertiary-container">Good First Issue</span>
+</div>
+<!-- AI Match Metric -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest space-y-1.5">
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span class="text-on-surface-variant">AI VECTOR MATCH</span>
+<span class="text-primary-container font-code-md">94% COMPATIBILITY</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container via-surface-tint to-tertiary-container" style="width: 94%;"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-outline font-label-mono">
+<span>HISTORICAL AST MATCH: 98%</span>
+<span>REPO DOMAIN: TOKENS/ASYNC</span>
+</div>
+</div>
+</div>
+<!-- Quick Subroutine Actions -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-md pt-space-sm">
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-primary font-label-mono text-label-mono flex flex-col items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-sm">psychology</span>
+<span>AI DECODE</span>
+</button>
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-high hover:bg-secondary-fixed-dim hover:text-on-secondary text-secondary font-label-mono text-label-mono flex flex-col items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-sm">account_tree</span>
+<span>PLAN MISSION</span>
+</button>
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-high hover:bg-tertiary-container hover:text-on-tertiary-container text-tertiary-fixed font-label-mono text-label-mono flex flex-col items-center justify-center gap-1 transition-all">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>CLAIM CHECK</span>
+</button>
+</div>
+</div>
+<!-- ==============================================
+         CENTERPIECE: CONTRIBUTION CORE HUD GAUGE
+         ============================================== -->
+<div class="xl:col-span-4 flex flex-col items-center justify-center p-space-lg rounded-2xl bg-surface-container-lowest/80 backdrop-blur-2xl shadow-2xl relative overflow-hidden z-20">
+<!-- Cybernetic Corner Flares -->
+<div class="absolute top-3 left-3 flex gap-1">
+<span class="w-1.5 h-1.5 bg-primary-container/80 rounded-full"></span>
+<span class="w-6 h-0.5 bg-primary-container/40"></span>
+</div>
+<div class="absolute top-3 right-3 flex gap-1 items-center">
+<span class="font-label-mono text-label-mono text-outline">CORE://PULSE</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="relative w-64 h-64 flex items-center justify-center my-space-xs">
+<!-- SVG Radial Multi-Arc HUD Gauge -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 200 200">
+<defs>
+<lineargradient id="cyberArcGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#00f0ff"></stop>
+<stop offset="65%" stop-color="#00dbe9"></stop>
+<stop offset="100%" stop-color="#00f89e"></stop>
+</lineargradient>
+<radialgradient cx="50%" cy="50%" id="hubCenterGlow" r="50%">
+<stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"></stop>
+<stop offset="60%" stop-color="#6f00be" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="transparent" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<!-- Ambient Hub Glow behind core circle -->
+<circle cx="100" cy="100" fill="url(#hubCenterGlow)" r="88"></circle>
+<!-- Outer Segmented Track -->
+<circle class="text-surface-container-high" cx="100" cy="100" fill="none" r="84" stroke="currentColor" stroke-dasharray="3 5" stroke-width="4"></circle>
+<!-- Outer Active Segment (Streak indicator) -->
+<circle class="text-tertiary-container" cx="100" cy="100" fill="none" opacity="0.85" r="84" stroke="currentColor" stroke-dasharray="14 4" stroke-dashoffset="40" stroke-width="4"></circle>
+<!-- Main Progress Arc Track (Background) -->
+<circle class="text-surface-container-highest" cx="100" cy="100" fill="none" opacity="0.4" r="70" stroke="currentColor" stroke-width="9"></circle>
+<!-- Main Progress Arc (75% - 3/4 Completed) -->
+<!-- Circumference = 2 * PI * 70 = 439.82; 75% = 329.86 stroke-dasharray -->
+<circle class="transition-all duration-1000 ease-out" cx="100" cy="100" fill="none" r="70" stroke="url(#cyberArcGrad)" stroke-dasharray="439.82" stroke-dashoffset="110" stroke-linecap="round" stroke-width="9"></circle>
+<!-- Inner Radar Reticle Crosshairs -->
+<line stroke="#00f0ff" stroke-width="1.5" x1="100" x2="100" y1="36" y2="44"></line>
+<line stroke="#00f0ff" stroke-width="1.5" x1="100" x2="100" y1="156" y2="164"></line>
+<line stroke="#00f0ff" stroke-width="1.5" x1="36" x2="44" y1="100" y2="100"></line>
+<line stroke="#00f0ff" stroke-width="1.5" x1="156" x2="164" y1="100" y2="100"></line>
+<!-- Central Pivot Ring -->
+<circle class="fill-surface-container-lowest" cx="100" cy="100" r="48" stroke="currentColor" stroke-width="1.5"></circle>
+</svg>
+<!-- Centered Core Metrics Overlay -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-space-sm pointer-events-none">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-widest text-[9px]">CONTRIBUTION CORE</span>
+<div class="font-display-hero text-display-hero font-bold tracking-tight text-primary leading-none my-1 flex items-baseline gap-1">
+<span>3</span>
+<span class="text-on-surface-variant font-display-hero text-headline-lg opacity-40">/</span>
+<span class="text-on-surface-variant font-display-hero text-headline-lg">4</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary-container tracking-wider">PR SPRINT GOAL</span>
+</div>
+</div>
+<!-- Core Contextual Telemetry -->
+<div class="w-full space-y-space-xs text-center mt-space-xs">
+<div class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-base">military_tech</span>
+<span class="font-body-sm text-body-sm">
+            Target: Merge <strong class="text-primary font-code-md">#184</strong> for <span class="text-tertiary-container font-semibold">"Open Source Vanguard"</span>
+</span>
+</div>
+<div class="flex items-center justify-between px-space-sm pt-space-xs font-label-mono text-label-mono text-outline">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            Streak: <span class="text-primary font-code-md">14 Days Active</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+            Velocity: <span class="text-tertiary-fixed-dim font-code-md">+38% wk</span>
+</span>
+</div>
+</div>
+</div>
+<!-- ==============================================
+         PANEL 2 (TOP-RIGHT): AI AGENT MISSION TELEMETRY
+         ============================================== -->
+<div class="xl:col-span-4 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low shadow-xl backdrop-blur-xl relative z-10 hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-secondary-fixed-dim rounded-sm"></span>
+<span class="font-label-mono text-label-mono text-secondary tracking-wider uppercase">AI Agent Mission Telemetry</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span>3 SYNCHRONIZED</span>
+</div>
+</div>
+<!-- Agent Trio Pipeline Rows -->
+<div class="space-y-space-xs">
+<!-- Agent 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-lg">radar</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-code-md text-code-md text-primary font-semibold">AGENT://FINDER</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Analyzing 42 open issues in watchlist</div>
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-primary bg-surface-container-lowest px-2 py-1 rounded">SCANNING</span>
+</div>
+<!-- Agent 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-lg">route</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-code-md text-code-md text-secondary font-semibold">AGENT://PLANNER</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Generated 8-step execution path for #184</div>
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-secondary bg-surface-container-lowest px-2 py-1 rounded">READY</span>
+</div>
+<!-- Agent 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/10 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-code-md text-code-md text-tertiary-fixed font-semibold">AGENT://REVIEWER</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Ready for AST diff analysis & tests</div>
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-tertiary-container bg-surface-container-lowest px-2 py-1 rounded">STANDBY</span>
+</div>
+</div>
+<!-- Live Terminal Event Stream -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-lowest font-code-md text-code-md text-outline space-y-1">
+<div class="flex items-center justify-between pb-1 text-[10px] font-label-mono text-outline border-b border-surface-container">
+<span>EVENT BUS STREAM</span>
+<span class="text-tertiary-container">BUFFER OK</span>
+</div>
+<div class="truncate text-on-surface-variant">
+<span class="text-primary-container">[14:22:04]</span> Dependency graph indexed for <span class="text-primary">src/auth</span>
+</div>
+<div class="truncate text-on-surface-variant">
+<span class="text-secondary">[14:22:11]</span> Synthesizing AST diff mock specs
+        </div>
+</div>
+</div>
+<!-- ==============================================
+         PANEL 3 (BOTTOM-LEFT): DEVELOPER SKILL CONSTELLATION
+         ============================================== -->
+<div class="xl:col-span-6 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low shadow-xl backdrop-blur-xl relative z-10 hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-surface-tint rounded-sm"></span>
+<span class="font-label-mono text-label-mono text-primary tracking-wider uppercase">Developer Skill Constellation</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-outline">
+<span>TIER: SENIOR SPECIALIST</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md items-center">
+<!-- Constellation Vector Canvas representation -->
+<div class="relative h-44 rounded-lg bg-surface-container-lowest flex items-center justify-center p-2 overflow-hidden">
+<svg class="w-full h-full" viewbox="0 0 260 140">
+<!-- Node Links -->
+<line stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.5" x1="60" x2="130" y1="40" y2="30"></line>
+<line stroke="#00f0ff" stroke-opacity="0.4" stroke-width="1.5" x1="130" x2="200" y1="30" y2="60"></line>
+<line stroke="#ddb7ff" stroke-opacity="0.4" stroke-width="1.5" x1="60" x2="90" y1="40" y2="100"></line>
+<line stroke="#849495" stroke-dasharray="3 3" stroke-width="1" x1="90" x2="180" y1="100" y2="110"></line>
+<line stroke="#00f89e" stroke-opacity="0.5" stroke-width="1.5" x1="130" x2="180" y1="30" y2="110"></line>
+<!-- Constellation Vertices -->
+<!-- Python (90%) -->
+<circle cx="60" cy="40" fill="#00363a" r="14" stroke="#00f0ff" stroke-width="2"></circle>
+<text fill="#dbfcff" font-family="JetBrains Mono" font-size="9" text-anchor="middle" x="60" y="44">PY</text>
+<!-- AsyncIO (75%) -->
+<circle cx="130" cy="30" fill="#00363a" r="12" stroke="#00dbe9" stroke-width="1.5"></circle>
+<text fill="#dbfcff" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="130" y="33">ASYNC</text>
+<!-- Git Workflow (85%) -->
+<circle cx="200" cy="60" fill="#490080" r="13" stroke="#ddb7ff" stroke-width="2"></circle>
+<text fill="#f0dbff" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="200" y="63">GIT</text>
+<!-- PyTest (60%) -->
+<circle cx="90" cy="100" fill="#003920" r="11" stroke="#00f89e" stroke-width="1.5"></circle>
+<text fill="#daffe4" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="90" y="103">TEST</text>
+<!-- Docker (45% - recommended unlock) -->
+<circle cx="180" cy="110" fill="#1b1f2a" r="10" stroke="#849495" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<text fill="#b9cacb" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="180" y="113">DCK</text>
+</svg>
+<div class="absolute bottom-2 left-2 text-[10px] font-label-mono text-outline">
+            AST TOPOLOGY V4
+          </div>
+</div>
+<!-- Metric Bars -->
+<div class="space-y-space-xs">
+<div>
+<div class="flex justify-between font-label-mono text-label-mono mb-1">
+<span class="text-on-surface">Python Architecture</span>
+<span class="text-primary font-code-md">90%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-mono text-label-mono mb-1">
+<span class="text-on-surface">AsyncIO Runtime & Concurrency</span>
+<span class="text-primary-fixed-dim font-code-md">75%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-surface-tint rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-mono text-label-mono mb-1">
+<span class="text-on-surface">Git Multi-Branch Triage</span>
+<span class="text-secondary-fixed-dim font-code-md">85%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Highlight Unlock Banner -->
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-highest flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-base">lock_open</span>
+<span class="font-body-sm text-body-sm text-on-surface">Next Recommended Unlock:</span>
+</div>
+<span class="font-label-mono text-label-mono text-tertiary-container">Unit Testing & Mocking</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ==============================================
+         PANEL 4 (BOTTOM-RIGHT): ORBITAL WATCHLIST & CLAIM RADAR
+         ============================================== -->
+<div class="xl:col-span-6 flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-low shadow-xl backdrop-blur-xl relative z-10 hover:bg-surface-container transition-all duration-300">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-tertiary-container rounded-sm"></span>
+<span class="font-label-mono text-label-mono text-tertiary-container tracking-wider uppercase">Orbital Watchlist & Claim Radar</span>
+</div>
+<button class="flex items-center gap-1 font-label-mono text-label-mono text-primary hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+<span>TRACK REPOSITORY</span>
+</button>
+</div>
+<!-- Radar Target List -->
+<div class="space-y-space-xs">
+<!-- Target 1: OpenTelemetry -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="relative flex items-center justify-center">
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="absolute w-5 h-5 rounded-full bg-tertiary-container/30 animate-ping"></span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">open-telemetry / opentelemetry-python</span>
+<span class="font-label-mono text-[10px] text-tertiary-container bg-surface-container-lowest px-1.5 py-0.5 rounded">ORBIT ACTIVE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">1 new Good First Issue matching your AsyncIO profile</div>
+</div>
+</div>
+<span class="font-code-md text-code-md text-primary bg-surface-container-lowest px-space-sm py-1 rounded">MATCH: 94%</span>
+</div>
+<!-- Target 2: FastAPI -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="w-3 h-3 rounded-full bg-tertiary-container opacity-80"></span>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">tiangolo / fastapi</span>
+<span class="font-label-mono text-[10px] text-outline bg-surface-container-lowest px-1.5 py-0.5 rounded">STABLE</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Watchlist idle • Last sync 4m ago</div>
+</div>
+</div>
+<span class="font-code-md text-code-md text-outline bg-surface-container-lowest px-space-sm py-1 rounded">MATCH: 88%</span>
+</div>
+<!-- Target 3: LangChain -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="relative flex items-center justify-center">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed"></span>
+<span class="absolute w-5 h-5 rounded-full bg-secondary-fixed/20 animate-pulse"></span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-body-lg font-semibold text-on-surface">langchain-ai / langchain</span>
+<span class="font-label-mono text-[10px] text-secondary-fixed bg-surface-container-lowest px-1.5 py-0.5 rounded">CONTESTED</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">1 contested issue • 2 developers drafting PRs simultaneously</div>
+</div>
+</div>
+<span class="font-code-md text-code-md text-secondary-fixed bg-surface-container-lowest px-space-sm py-1 rounded">CLAIM RISK</span>
+</div>
+</div>
+<!-- Quick Telemetry Sub-bar -->
+<div class="flex items-center justify-between font-label-mono text-label-mono text-outline pt-space-xs">
+<span>TOTAL MONITORED: 18 REPOSITORIES</span>
+<span>BACKGROUND FREQUENCY: 120s</span>
+</div>
+</div>
+</div>
+<!-- ==============================================
+       BOTTOM PERSISTENT PRIMARY MISSION ACTION BAR
+       ============================================== -->
+<div class="mt-space-lg w-full p-space-md rounded-xl bg-surface-container-high shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-space-md relative overflow-hidden">
+<!-- Neon Accent Glow Conduit -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary-container via-surface-tint to-tertiary-container"></div>
+<div class="flex items-center gap-space-md pl-space-xs w-full lg:w-auto">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-2xl animate-spin" style="animation-duration: 12s;">autorenew</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-outline">
+<span class="text-primary-container font-semibold">ACTIVE SORTIE:</span>
+<span>MISSION #184 IN PROGRESS</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface flex items-center gap-space-sm flex-wrap">
+<span>Next Step: Modify Session Logic in <code class="font-code-md text-code-md text-primary bg-surface-container-lowest px-2 py-0.5 rounded">src/auth/token_worker.py</code></span>
+</div>
+</div>
+</div>
+<!-- Right Controls inside Action Bar -->
+<div class="flex items-center gap-space-md w-full lg:w-auto justify-end">
+<div class="hidden sm:flex flex-col text-right font-label-mono text-label-mono">
+<span class="text-on-surface">BRANCH: <code class="text-tertiary-container">fix/auth-backoff-184</code></span>
+<span class="text-outline">AUTOMATED TESTS: 12/12 PASS</span>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-primary-fixed text-on-primary-container font-headline-md text-body-md font-semibold flex items-center justify-center gap-space-sm transition-all shadow-[0_0_24px_rgba(0,240,255,0.35)]">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+<span>OPEN MISSION PLANNER</span>
+</button>
+</div>
+</div>
+</div></main></div><div class="hidden fixed inset-0 z-50 flex items-start justify-center pt-24 bg-surface-container-lowest/80 backdrop-blur-md" id="hud-command-palette"><div class="w-full max-w-2xl bg-surface-container-high border border-outline-variant/50 rounded-xl shadow-[0_16px_48px_rgba(0,0,0,0.8)] overflow-hidden"><div class="flex items-center gap-space-md px-space-lg py-space-md border-b border-outline-variant/30"><span class="material-symbols-outlined text-primary-container">terminal</span><input class="w-full bg-transparent font-code-md text-code-md text-primary placeholder-outline-variant focus:outline-none" placeholder="Type an agent subroutine or system command..." type="text"/><button class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary px-2 py-1 rounded bg-surface-container-lowest border border-outline-variant/30" onclick="document.getElementById('hud-command-palette').classList.add('hidden')">ESC</button></div><div class="p-space-md space-y-space-xs"><div class="font-label-mono text-label-mono text-outline px-space-sm mb-space-xs">QUICK SUBROUTINES</div><div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container cursor-pointer font-body-sm text-body-sm text-on-surface hover:text-primary"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">sync_alt</span> Dispatch Triage Multi-Agent</span><span class="font-label-mono text-label-mono text-outline">AGENT://DISPATCH</span></div><div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container cursor-pointer font-body-sm text-body-sm text-on-surface hover:text-primary"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">layers</span> Render 3D Topology Mesh</span><span class="font-label-mono text-label-mono text-outline">VIEW://TOPOLOGY</span></div></div></div></div></body></html>

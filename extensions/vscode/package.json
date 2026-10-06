@@ -1,0 +1,29 @@
+{
+  "name": "repomind-x-vscode",
+  "displayName": "RepoMind-X // Open-Source Contribution Copilot",
+  "description": "NVIDIA Nemotron powered open source contribution flight deck in VS Code",
+  "version": "1.0.0",
+  "publisher": "repomind",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:repomind.startMission"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "repomind.startMission",
+        "title": "RepoMind-X: Start Contribution Mission"
+      },
+      {
+        "command": "repomind.reviewDiff",
+        "title": "RepoMind-X: Review Current Git Diff"
+      },
+      {
+        "command": "repomind.debugTerminal",
+        "title": "RepoMind-X: Debug Last Error with AI"
+      }
+    ]
+  }
+}

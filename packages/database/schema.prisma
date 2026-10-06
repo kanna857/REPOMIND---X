@@ -1,0 +1,191 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id              String           @id @default(uuid())
+  githubId        String           @unique
+  username        String
+  name            String?
+  avatarUrl       String?
+  email           String?
+  streak          Int              @default(1)
+  contributionScore Int            @default(450)
+  learningLevel   String           @default("Explorer")
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  plans           ContributionPlan[]
+  agentRuns       AgentRun[]
+  reviews         Review[]
+  portfolio       Portfolio?
+  watchlists      Watchlist[]
+  notifications   Notification[]
+  badges          UserBadge[]
+}
+
+model Repository {
+  id              String      @id @default(uuid())
+  owner           String
+  name            String
+  fullName        String      @unique
+  stars           Int         @default(0)
+  forks           Int         @default(0)
+  openIssues      Int         @default(0)
+  primaryLanguage String?
+  healthScore     Int         @default(90)
+  issues          Issue[]
+  watchlists      Watchlist[]
+}
+
+model Issue {
+  id              String         @id @default(uuid())
+  githubNumber    Int
+  title           String
+  body            String
+  repositoryId    String
+  repository      Repository     @relation(fields: [repositoryId], references: [id])
+  difficulty      String         @default("Easy")
+  labels          String[]
+  claimStatus     String         @default("Available")
+  matchScore      Int            @default(90)
+  estimatedHours  String?
+  analysis        IssueAnalysis?
+  plans           ContributionPlan[]
+  createdAt       DateTime       @default(now())
+}
+
+model IssueAnalysis {
+  id                    String   @id @default(uuid())
+  issueId               String   @unique
+  issue                 Issue    @relation(fields: [issueId], references: [id])
+  problemSummary        String
+  maintainerExpectation String
+  skillsNeeded          String[]
+  likelyFiles           String[]
+  confidenceScore       Float    @default(0.95)
+  astComplexityScore    Int      @default(3)
+  createdAt             DateTime @default(now())
+}
+
+model ContributionPlan {
+  id            String   @id @default(uuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  issueId       String
+  issue         Issue    @relation(fields: [issueId], references: [id])
+  missionNumber String
+  status        String   @default("In Progress")
+  branchName    String
+  stepsJson     Json
+  gitCommands   String[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model AgentRun {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  agentName String
+  status    String
+  logsJson  Json
+  createdAt DateTime @default(now())
+}
+
+model Review {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  diffHash       String
+  readinessScore Int
+  verdict        String
+  findingsJson   Json
+  createdAt      DateTime @default(now())
+}
+
+model PullRequest {
+  id          String   @id @default(uuid())
+  githubPrUrl String?
+  title       String
+  branch      String
+  state       String   @default("open")
+  createdAt   DateTime @default(now())
+}
+
+model Portfolio {
+  id            String   @id @default(uuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id])
+  prsMerged     Int      @default(0)
+  issuesSolved  Int      @default(0)
+  reposContributed Int   @default(0)
+  technologies  String[]
+  bio           String?
+  skillsJson    Json?
+}
+
+model Skill {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  category    String
+  level       Int      @default(1)
+}
+
+model LearningProgress {
+  id            String   @id @default(uuid())
+  userId        String
+  topic         String
+  status        String
+  progressPct   Int      @default(0)
+}
+
+model Watchlist {
+  id           String     @id @default(uuid())
+  userId       String
+  user         User       @relation(fields: [userId], references: [id])
+  repositoryId String
+  repository   Repository @relation(fields: [repositoryId], references: [id])
+  notifyEmail  Boolean    @default(true)
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  title     String
+  message   String
+  type      String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Community {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  description String
+  membersCount Int     @default(1)
+}
+
+model Badge {
+  id          String      @id @default(uuid())
+  code        String      @unique
+  title       String
+  description String
+  icon        String
+  users       UserBadge[]
+}
+
+model UserBadge {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  badgeId   String
+  badge     Badge    @relation(fields: [badgeId], references: [id])
+  awardedAt DateTime @default(now())
+}

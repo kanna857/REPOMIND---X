@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#0f131d","surface-container":"#1b1f2a","on-secondary-fixed-variant":"#6900b3","on-error-container":"#ffdad6","surface-bright":"#353944","on-tertiary-container":"#006d43","on-tertiary":"#003920","on-tertiary-fixed-variant":"#005231","primary":"#dbfcff","on-surface-variant":"#b9cacb","tertiary-fixed":"#52ffac","tertiary-fixed-dim":"#00e290","surface-tint":"#00dbe9","error-container":"#93000a","surface-container-high":"#262a35","on-error":"#690005","inverse-surface":"#dfe2f1","surface-dim":"#0f131d","primary-fixed":"#7df4ff","secondary-fixed-dim":"#ddb7ff","on-primary":"#00363a","surface-container-lowest":"#0a0e18","on-secondary-fixed":"#2c0051","tertiary-container":"#00f89e","on-secondary":"#490080","on-background":"#dfe2f1","on-primary-container":"#006970","secondary-container":"#6f00be","outline-variant":"#3b494b","background":"#0f131d","surface-container-low":"#171b26","secondary-fixed":"#f0dbff","on-secondary-container":"#d6a9ff","primary-container":"#00f0ff","on-tertiary-fixed":"#002111","surface-container-highest":"#313540","surface-variant":"#313540","inverse-on-surface":"#2c303b","primary-fixed-dim":"#00dbe9","secondary":"#ddb7ff","tertiary":"#daffe4","error":"#ffb4ab","on-surface":"#dfe2f1","outline":"#849495","on-primary-fixed-variant":"#004f54","inverse-primary":"#006970","on-primary-fixed":"#002022"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.5rem","space-md":"1rem","margin-md":"1.5rem","gutter-lg":"1.5rem","margin-lg":"2.5rem","gutter":"1rem","margin":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"code-md":["JetBrains Mono"],"body-sm":["Geist"],"display-hero":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Geist"],"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"body-md":["Geist"],"label-mono":["JetBrains Mono"]},fontSize:{"code-md":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"400"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"label-mono":["11px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container"><div class="fixed inset-0 pointer-events-none bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] z-0"></div><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="RepoMind-X Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X_gJ5lmWHqP2UBYELXIWwDKBb0HI0jMY9aMnEpSA3yyQeXGG6VUNvySRzYoYCBB2XUsd1IGJvGrE7O6R_sdemlhKyK0-EIKWbfZLD2Q_-lJieq4xP12LIOdYz3cm8FuaSuMY0iRqrRNTtqGvCkDu3Q4UxKr3UO2C0AQ-tzCs3MKhHrS7kAhP8VthGkiNGS1Vpj3Wnk7HNKrJkqYQl_PCsOsyQ-E-z-QW03ldG5ZEmhechZnMKnm24Y"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-wider text-primary font-semibold">REPOMIND // X</span><span class="font-label-mono text-label-mono text-outline-variant tracking-widest">v4.8.2 COCKPIT</span></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high border border-outline-variant/40"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-mono text-label-mono text-tertiary-container uppercase">SYS: ONLINE</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 rounded-full bg-surface-container-low/70 border border-outline-variant/20" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,240,255,0.2)]"><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="3d-galaxy" href="#">3D Galaxy</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="command-core" href="#">Command Core</a><a aria-current="page" class="px-space-md py-1.5 rounded-full transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_0_12px_rgba(0,240,255,0.2)]" data-path="discover-issues" href="#">Discover Issues</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="ai-multi-agent" href="#">AI Multi-Agent</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="mission-plan" href="#">Mission Plan</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="pr-inspection" href="#">PR Inspection</a><a class="px-space-md py-1.5 rounded-full font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="dev-passport" href="#">Dev Passport</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="hidden md:flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary-fixed-dim/60 text-on-surface-variant hover:text-primary transition-all shadow-sm" onclick="document.getElementById('hud-command-palette').classList.remove('hidden')"><span class="material-symbols-outlined text-base">terminal</span><span class="font-code-md text-code-md">Prompt / Search</span><span class="px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant/40 font-label-mono text-label-mono text-primary">⌘K</span></button><div class="hidden 2xl:flex items-center gap-space-md px-space-md py-1 rounded-lg bg-surface-container-low border border-outline-variant/30 font-label-mono text-label-mono"><div class="flex items-center gap-1 text-on-surface-variant">LATENCY: <span class="text-tertiary-container">12MS</span></div><div class="h-3 w-[1px] bg-outline-variant/40"></div><div class="flex items-center gap-1 text-on-surface-variant">TARGET: <span class="text-primary-container">4 PRS</span></div></div><div class="relative flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors cursor-pointer"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-fixed ring-2 ring-surface-container-lowest animate-pulse"></span></div><div class="relative p-0.5 rounded-full bg-gradient-to-r from-primary-container via-surface-tint to-secondary-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover block bg-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQGYK3a5u2LLbTuHZDkB9BqDUkS5-LljlFZGyYsisgCp_BMp7eGT3B48-D6WqexqgQuw4edzsdCBSCppl_Ms7YyBSfBDSkglyppezlRoIXcUkTQifkIgnD3AAPkKtJrCZw6jOZt4P0DHqIhNUNEM9Ey9Pb4EhoGKWWuhh9kd18ZDp5KilZwZ10CR9yzylLp_mBbnF4F-nvCmbUNKCR3h4QKFVpWXGbdgJGAaehz8aumCVkn-G8Sw"/></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest/90 backdrop-blur-xl border-r border-outline-variant/20 z-40 flex flex-col justify-between p-space-md hidden lg:flex"><div class="space-y-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low/60 border border-outline-variant/30"><div class="flex items-center justify-between font-label-mono text-label-mono text-outline-variant mb-space-xs"><span>ACTIVE SYNAPSE</span><span class="text-tertiary-container">AGENT CLUSTER #9</span></div><div class="flex items-center gap-space-xs"><div class="h-1.5 flex-1 rounded bg-surface-container-highest overflow-hidden"><div class="h-full w-3/4 bg-primary-container animate-pulse"></div></div><span class="font-code-md text-code-md text-primary">75% LOAD</span></div></div><div class="space-y-1"><span class="px-space-sm font-label-mono text-label-mono text-outline uppercase tracking-wider">Telemetry Rails</span><nav class="space-y-0.5 mt-space-xs" data-active-classes="bg-surface-container-high text-primary font-semibold border-l-2 border-primary-container"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="command-core" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">terminal</span>Live Stream</span><span class="font-label-mono text-label-mono text-primary">LIVE</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="ai-multi-agent" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">smart_toy</span>Agent Fleet</span><span class="font-label-mono text-label-mono text-tertiary-container">14 ACT</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="pr-inspection" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">merge</span>Triage Matrix</span><span class="font-label-mono text-label-mono text-error">2 CONFL</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="3d-galaxy" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-lg">hub</span>Vector Graph</span><span class="font-label-mono text-label-mono text-secondary-fixed-dim">NODE V4</span></a></nav></div></div><div class="p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 space-y-space-xs"><div class="flex items-center justify-between font-label-mono text-label-mono text-on-surface-variant"><span>NODE KERNEL</span><span class="text-primary">STABLE</span></div><div class="text-body-sm font-body-sm text-outline">Synced to upstream repo 42s ago.</div></div></aside><div class="lg:pl-72 min-h-screen flex flex-col relative z-10"><main class="flex-1 pt-16 bg-surface/50 w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full">
+<!-- LABORATORY COMMAND HORIZON -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest p-space-lg mb-space-lg overflow-hidden shadow-2xl">
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-primary-container/10 blur-[110px] pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-16 w-80 h-80 rounded-full bg-secondary-container/15 blur-[90px] pointer-events-none"></div>
+<!-- Sub-header Overline & Telemetry Pulse -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_12px_#00f0ff] animate-ping"></span>
+<span class="font-label-mono text-label-mono uppercase tracking-[0.2em] text-primary-container">LABORATORY SECTOR // MATRIX 04</span>
+<span class="text-outline font-label-mono text-label-mono">/</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">SYNAPTIC DISCOVERY CORE</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-code-md text-code-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-tertiary-container">radar</span>
+          Scanned: <span class="text-primary font-bold">14,892 repos</span>
+</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high font-label-mono text-label-mono text-tertiary-container">
+          RADAR LOCK: LIVE
+        </span>
+</div>
+</div>
+<!-- Title & Cockpit HUD Identity -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-lg">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm text-outline-variant font-code-md text-code-md">
+<span>COCKPIT INDEX</span>
+<span>»</span>
+<span class="text-primary">ISSUE_RECON_V4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-semibold flex items-center gap-space-sm">
+          DISCOVERY LABORATORY
+          <span class="font-label-mono text-label-mono px-2 py-1 rounded bg-surface-container-high text-surface-tint tracking-widest font-normal">
+            AI RECON MATRIX
+          </span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Deep telemetry ingestion across GitHub open-source clusters. Neural semantic filtering identifies unblocked, claim-verified, high-yield issues tuned to your exact developer fingerprint.
+        </p>
+</div>
+<!-- Live Synapse Match Rate Mini-Dial -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-container-low shadow-inner">
+<svg class="w-14 h-14 shrink-0 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-primary-container" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="15" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="flex flex-col pr-space-sm">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">DEV MATCH RECEPTOR</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">96.4%</span>
+<span class="font-body-sm text-body-sm text-tertiary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">bolt</span>
+            Python & Async Optimized
+          </span>
+</div>
+</div>
+</div>
+<!-- Futuristic Cybernetic Input Bar -->
+<div class="relative w-full rounded-xl bg-surface-container-high/90 p-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col md:flex-row items-stretch md:items-center gap-space-xs">
+<div class="flex items-center gap-space-sm px-space-md flex-1 py-space-sm">
+<span class="material-symbols-outlined text-primary-container text-2xl">troubleshoot</span>
+<input class="w-full bg-transparent font-code-md text-code-md text-primary placeholder-outline-variant focus:outline-none" placeholder="Search repositories, issues, stack vectors, or paste issue URL (e.g. org/repo#123)..." type="text" value='org:open-telemetry label:"good first issue" stack:asyncio status:unclaimed'/>
+<button class="shrink-0 font-label-mono text-label-mono px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors">
+            CLEAR
+          </button>
+</div>
+<div class="flex items-center gap-space-xs px-space-xs pb-space-xs md:pb-0 shrink-0">
+<!-- NLP Toggle -->
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-base text-secondary">psychology</span>
+<span class="font-label-mono text-label-mono text-on-surface">SEMANTIC MATCH</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container shadow-[0_0_8px_#00f89e]"></span>
+</div>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary-container font-headline-md text-body-md font-semibold shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg">search</span>
+<span>EXECUTE RECON</span>
+</button>
+</div>
+</div>
+<!-- Quick Toggles Bar Below Input -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs px-space-md py-space-xs bg-surface-container-lowest/60 rounded-lg mt-1">
+<div class="flex flex-wrap items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-label-mono text-label-mono text-outline uppercase">Neural Weights:</span>
+<label class="flex items-center gap-1.5 cursor-pointer hover:text-primary">
+<input checked="" class="accent-primary-container rounded" type="checkbox"/>
+<span>Beginner Friendly (First PR)</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer hover:text-primary">
+<input checked="" class="accent-primary-container rounded" type="checkbox"/>
+<span>Fast Maintainer Response (< 6 hrs)</span>
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer hover:text-primary">
+<input checked="" class="accent-primary-container rounded" type="checkbox"/>
+<span>Strict Unclaimed Filter</span>
+</label>
+</div>
+<div class="font-label-mono text-label-mono text-outline flex items-center gap-2">
+<span>PARSER ENGINE: LLM-AGENT-RECON v8</span>
+</div>
+</div>
+</div>
+<!-- Pill-Shaped Cybernetic Command Chips -->
+<div class="mt-space-md flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-bright transition-all flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+        ALL ECOSYSTEMS
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-primary-container/20 text-primary-container shadow-[0_0_12px_rgba(0,240,255,0.25)] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+        PYTHON (ACTIVE)
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-xs text-secondary">memory</span>
+        AI / LLM
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all shadow-sm">
+        RUST
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all shadow-sm">
+        TYPESCRIPT
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all shadow-sm">
+        GO
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-tertiary-container/20 text-tertiary-container shadow-[0_0_12px_rgba(0,248,158,0.2)] flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+        GOOD FIRST ISSUE (ACTIVE)
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+        < 3 HOURS
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all shadow-sm">
+        HIGH MAINTAINER ACTIVITY
+      </button>
+<button class="px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase tracking-wider bg-surface-container-high text-primary flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary-container">verified</span>
+        VERIFIED UNCLAIMED
+      </button>
+</div>
+</div>
+<!-- MAIN OPERATIONAL WORKSPACE (GRID + RADAR DRAWER) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / CENTER: MISSION BRIEFING ISSUE MATRIX (8 COLS) -->
+<div class="xl:col-span-8 space-y-space-md">
+<div class="flex items-center justify-between px-space-xs font-label-mono text-label-mono text-outline">
+<span class="uppercase tracking-widest flex items-center gap-2">
+<span class="w-2 h-2 rounded bg-primary-container"></span>
+          PRIORITIZED MISSION TARGETS // 4 IDENTIFIED
+        </span>
+<span class="text-on-surface-variant">SORT: NEURAL CONFIDENCE (DESC)</span>
+</div>
+<!-- CARD 1: FLAGSHIP TARGET (Layered 3D HUD Glass Panel) -->
+<div class="relative rounded-2xl bg-surface-container-low/95 p-space-lg shadow-[0_16px_40px_rgba(0,0,0,0.6)] transition-all hover:bg-surface-container-low hover:shadow-[0_20px_50px_rgba(0,240,255,0.08)] group overflow-hidden">
+<!-- Laser Top Horizon Indicator -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container via-surface-tint to-secondary-container"></div>
+<div class="absolute -right-16 -bottom-16 w-56 h-56 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md">
+<!-- Card Header & Status Chips -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest font-code-md text-code-md text-primary font-bold tracking-tight">
+                ISSUE #184
+              </span>
+<span class="font-code-md text-code-md text-on-surface-variant">open-telemetry / opentelemetry-python</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-container font-label-mono text-label-mono flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container shadow-[0_0_6px_#00f89e]"></span>
+                GOOD FIRST ISSUE • UNCLAIMED
+              </span>
+</div>
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-outline">
+<span class="material-symbols-outlined text-sm text-tertiary-container">schedule</span>
+              UPDATED 14M AGO
+            </div>
+</div>
+<!-- Main Title & Core Summary -->
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold group-hover:text-primary-container transition-colors cursor-pointer" onclick="openRadarDrawer('issue-184')">
+              Fix authentication timeout in token refresh worker
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Connection drops silently during long-lived session refreshes. Needs async fallback decorator and proper exception mapping for PyJWT 2.8+ compatibility.
+            </p>
+</div>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-primary-fixed">
+              PYTHON
+            </span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-error">
+              BUG
+            </span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-tertiary-container">
+              DIFFICULTY: EASY
+            </span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-secondary">
+              ASYNCIO
+            </span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-outline">
+              EST. LINES: ~24 LOC
+            </span>
+</div>
+<!-- Telemetry Bar: AI Match Rate + Health Matrix -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest space-y-space-xs">
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span class="text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary-container">auto_awesome</span>
+                94% AI MATCH <span class="text-outline font-normal">(Targeted to your Python & AsyncIO background)</span>
+</span>
+<span class="text-tertiary-container font-code-md text-code-md">READY FOR DISPATCH</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-surface-tint to-primary-container rounded shadow-[0_0_10px_#00f0ff]" style="width: 94%;"></div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm text-secondary">pace</span>
+<span>⏱ 2-3 HOURS ESTIMATED</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>ACTIVE REPO (Maintainer PR review < 4 hrs)</span>
+</div>
+<div class="font-code-md text-code-md text-outline">
+                Stars: 4.8k • PR Merge Rate: 91%
+              </div>
+</div>
+</div>
+<!-- Action Subroutines -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm font-semibold flex items-center gap-1.5 transition-all" onclick="openRadarDrawer('issue-184')">
+<span class="material-symbols-outlined text-sm text-primary-container">translate</span>
+                EXPLAIN SIMPLY
+              </button>
+<button class="px-space-md py-2 rounded-lg bg-secondary-container/20 text-secondary hover:bg-secondary-container/30 font-body-sm text-body-sm font-semibold flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+                PLAN MISSION
+              </button>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-mono text-label-mono text-tertiary-container px-space-sm py-1 rounded bg-tertiary-container/10">
+                CLAIM CHECK: 87% CLEAR
+              </span>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container text-on-primary-container font-headline-md text-body-md font-semibold hover:shadow-[0_0_16px_rgba(0,240,255,0.4)] transition-all">
+                CLAIM ISSUE & FORK
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: LANGCHAIN MISSION -->
+<div class="relative rounded-2xl bg-surface-container-low/80 p-space-lg shadow-xl hover:bg-surface-container-low transition-all group overflow-hidden">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest font-code-md text-code-md text-primary font-bold">
+                ISSUE #391
+              </span>
+<span class="font-code-md text-code-md text-on-surface-variant">langchain-ai / langchain</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed-dim font-label-mono text-label-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                HIGH IMPACT
+              </span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">UPDATED 1H AGO</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold group-hover:text-primary-container transition-colors cursor-pointer" onclick="openRadarDrawer('issue-391')">
+              Add retry exponential backoff for streaming endpoint
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              LLM HTTP chunks fail during sporadic upstream provider network jitter. Inject exponential backoff wrapper into the iterator callback handler.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-primary-fixed">PYTHON</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-surface-tint">ENHANCEMENT</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-outline">HTTPX / STREAMING</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">AI MATCH</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">89%</span>
+</div>
+<div class="h-6 w-[1px] bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">TIME ESTIMATE</span>
+<span class="font-code-md text-code-md text-primary">⏱ 3-4 Hours</span>
+</div>
+<div class="h-6 w-[1px] bg-surface-container-highest hidden sm:block"></div>
+<div class="hidden sm:flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">RADAR INTEGRITY</span>
+<span class="font-code-md text-code-md text-tertiary-container">No Claims Detected</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 w-full md:w-auto justify-end">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openRadarDrawer('issue-391')">
+                EXPLAIN
+              </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-body-sm text-body-sm font-semibold hover:shadow-md transition-all">
+                PLAN SUBROUTINE
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: FASTAPI TARGET (96% MATCH HIGH PRIORITY) -->
+<div class="relative rounded-2xl bg-surface-container-low/80 p-space-lg shadow-xl hover:bg-surface-container-low transition-all group overflow-hidden">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest font-code-md text-code-md text-primary font-bold">
+                ISSUE #702
+              </span>
+<span class="font-code-md text-code-md text-on-surface-variant">tiangolo / fastapi</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-container font-label-mono text-label-mono flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                SWIFT MERGE RECORD
+              </span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">UPDATED 3H AGO</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold group-hover:text-primary-container transition-colors cursor-pointer" onclick="openRadarDrawer('issue-702')">
+              Fix typing mismatch on multipart form upload schema
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Pydantic v2 metadata generator triggers unhandled TypeError when Optional[UploadFile] is parsed inside Annotated dependencies.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-primary-fixed">PYTHON</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-secondary">DOCS & BUG</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-tertiary-container">PYDANTIC V2</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">AI MATCH</span>
+<span class="font-headline-md text-headline-md text-tertiary-container font-bold">96%</span>
+</div>
+<div class="h-6 w-[1px] bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">TIME ESTIMATE</span>
+<span class="font-code-md text-code-md text-primary">⏱ 1 Hour Quickfix</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 w-full md:w-auto justify-end">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openRadarDrawer('issue-702')">
+                EXPLAIN
+              </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-body-sm text-body-sm font-semibold hover:shadow-md transition-all">
+                PLAN SUBROUTINE
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 4: CONTESTED ISSUE (Amber-Red Warning Claim Aura) -->
+<div class="relative rounded-2xl bg-surface-container-low/90 p-space-lg shadow-xl overflow-hidden group">
+<!-- Contested Amber/Red Pulse Edge -->
+<div class="absolute inset-0 bg-gradient-to-r from-error/15 via-transparent to-error/10 pointer-events-none"></div>
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-error via-error-container to-secondary"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-surface-container-highest font-code-md text-code-md text-primary font-bold">
+                ISSUE #412
+              </span>
+<span class="font-code-md text-code-md text-on-surface-variant">huggingface / transformers</span>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-mono text-label-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span>
+                CLAIM CONTESTED
+              </span>
+</div>
+<span class="font-label-mono text-label-mono text-outline">UPDATED 48M AGO</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+              Support FP8 tensor casting in distributed pipeline
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Precision truncation during multi-GPU gradient reduction creates scale drift on NVidia H100 nodes.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-primary-fixed">PYTHON</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-secondary">PERFORMANCE</span>
+<span class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono text-label-mono text-outline">CUDA / FP8</span>
+</div>
+<!-- Claim Radar Warning Box -->
+<div class="p-space-md rounded-xl bg-error-container/20 text-on-error-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-xl shrink-0 mt-0.5">notification_important</span>
+<div>
+<div class="font-headline-md text-body-md font-bold text-error flex items-center gap-2">
+                  CLAIM OVERLAP WARNING
+                  <span class="font-label-mono text-label-mono px-1.5 py-0.5 rounded bg-error text-on-error font-semibold">87% CONFIDENCE</span>
+</div>
+<div class="font-code-md text-code-md text-on-surface mt-0.5">
+                  @contributor123 commented 3h ago: <span class="text-secondary italic">"Working on this! Have a local branch tested."</span>
+</div>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-mono text-label-mono shrink-0 transition-all">
+              INSPECT THREAD
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT: INTERACTIVE CYBERNETIC DRAWER / RADAR HUD (4 COLS) -->
+<div class="xl:col-span-4 space-y-space-md">
+<!-- RADAR HEADQUARTERS HUD -->
+<div class="sticky top-20 rounded-2xl bg-surface-container-low/95 p-space-lg shadow-2xl backdrop-blur-xl" id="ai-radar-panel">
+<!-- Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-xl animate-spin" style="animation-duration: 12s;">all_inclusive</span>
+<div>
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider block">AI DECODE TELEMETRY</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">CLAIM RADAR CORE</span>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded bg-surface-container-high font-label-mono text-label-mono text-surface-tint">
+            TARGET #184
+          </span>
+</div>
+<!-- Radar Visual Sweep Map (Inline SVG HUD Radar) -->
+<div class="relative w-full h-48 rounded-xl bg-surface-container-lowest overflow-hidden flex items-center justify-center p-2 my-space-sm shadow-inner">
+<div class="absolute inset-0 bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+<svg class="w-full h-full" viewbox="0 0 200 120">
+<!-- Radar Concentric Rings -->
+<circle cx="100" cy="60" fill="none" r="50" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1"></circle>
+<circle cx="100" cy="60" fill="none" r="30" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1"></circle>
+<circle cx="100" cy="60" fill="none" r="10" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1"></circle>
+<!-- Axis lines -->
+<line stroke="rgba(0, 240, 255, 0.2)" stroke-dasharray="2 2" x1="100" x2="100" y1="5" y2="115"></line>
+<line stroke="rgba(0, 240, 255, 0.2)" stroke-dasharray="2 2" x1="20" x2="180" y1="60" y2="60"></line>
+<!-- Target Nodes on Radar -->
+<circle class="animate-ping" cx="100" cy="60" fill="#00f0ff" r="4"></circle>
+<circle cx="100" cy="60" fill="#00f0ff" r="3"></circle>
+<!-- Other scan nodes -->
+<circle cx="130" cy="40" fill="#00f89e" r="3"></circle>
+<text fill="#00f89e" font-family="JetBrains Mono" font-size="7" x="135" y="42">#184 [94%]</text>
+<circle cx="70" cy="75" fill="#a855f7" r="2.5"></circle>
+<text fill="#a855f7" font-family="JetBrains Mono" font-size="7" x="50" y="85">#391 [89%]</text>
+<circle cx="145" cy="80" fill="#ffb4ab" r="2.5"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="7" x="148" y="85">#412 [CONTESTED]</text>
+<!-- Sweep Cone Beam -->
+<polygon fill="rgba(0, 240, 255, 0.08)" points="100,60 160,10 180,45"></polygon>
+</svg>
+<div class="absolute bottom-2 left-3 font-label-mono text-label-mono text-outline-variant">
+            SWEEP: 360° // FREQ 14.4GHZ
+          </div>
+<div class="absolute top-2 right-3 font-label-mono text-label-mono text-tertiary-container flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+            NO GHOST LOCKS
+          </div>
+</div>
+<!-- Plain-Language Summary Box -->
+<div class="space-y-space-xs">
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-wider">
+            AI SYNAPSE DECODE (PLAIN-LANGUAGE)
+          </div>
+<div class="p-space-md rounded-xl bg-surface-container-high/60">
+<p class="font-body-md text-body-md text-primary leading-relaxed">
+              "The token worker drops connections after 30 seconds when refreshing JWT tokens because the timeout defaults to a synchronous socket block. Needs an async timeout wrapper in <code class="text-primary-container bg-surface-container-lowest px-1.5 py-0.5 rounded font-code-md text-code-md">auth/worker.py</code>."
+            </p>
+</div>
+</div>
+<!-- Required Skills Breakdown -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-wider flex items-center justify-between">
+<span>SKILL MATCH VECTOR</span>
+<span class="text-primary">DEV PASS MATCH</span>
+</div>
+<div class="space-y-space-xs">
+<div>
+<div class="flex justify-between font-label-mono text-label-mono mb-1 text-on-surface-variant">
+<span>PYTHON (SYNTAX & RUNTIME)</span>
+<span class="text-tertiary-container font-bold">78% REQUIRED</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary-container rounded" style="width: 78%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-mono text-label-mono mb-1 text-on-surface-variant">
+<span>ASYNCIO & EVENT LOOPS</span>
+<span class="text-primary-container font-bold">65% REQUIRED</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded" style="width: 65%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-mono text-label-mono mb-1 text-on-surface-variant">
+<span>PYTEST & MOCK FIXTURES</span>
+<span class="text-secondary font-bold">45% REQUIRED</span>
+</div>
+<div class="w-full h-1.5 rounded bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Code Vector Anchor Preview -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-wider">TARGET DISPATCH ANCHOR</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest font-code-md text-code-md text-on-surface-variant space-y-1">
+<div class="flex items-center justify-between text-outline">
+<span>PATH: opentelemetry/auth/worker.py</span>
+<span>L: 142</span>
+</div>
+<div class="text-error font-mono text-xs">- resp = self._sock.recv(1024) # BLOCKING</div>
+<div class="text-tertiary-container font-mono text-xs">+ resp = await asyncio.wait_for(...)</div>
+</div>
+</div>
+<!-- Direct Dispatch Actions -->
+<div class="pt-space-sm flex flex-col gap-space-xs">
+<button class="w-full py-2.5 rounded-lg bg-primary-container text-on-primary-container font-headline-md text-body-md font-semibold shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-space-sm">
+<span class="material-symbols-outlined text-lg">terminal</span>
+            LAUNCH DEV CONTAINER & SOLVE
+          </button>
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-primary font-body-sm text-body-sm font-semibold transition-all flex items-center justify-center gap-space-sm">
+<span class="material-symbols-outlined text-base">chat</span>
+            GENERATE DRAFT COMMENT FOR MAINTAINER
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openRadarDrawer(issueId) {
+    const radar = document.getElementById('ai-radar-panel');
+    if (!radar) return;
+    radar.classList.add('ring-2', 'ring-primary-container');
+    setTimeout(() => {
+      radar.classList.remove('ring-2', 'ring-primary-container');
+    }, 800);
+  }
+</script></main></div><div class="hidden fixed inset-0 z-50 flex items-start justify-center pt-24 bg-surface-container-lowest/80 backdrop-blur-md" id="hud-command-palette"><div class="w-full max-w-2xl bg-surface-container-high border border-outline-variant/50 rounded-xl shadow-[0_16px_48px_rgba(0,0,0,0.8)] overflow-hidden"><div class="flex items-center gap-space-md px-space-lg py-space-md border-b border-outline-variant/30"><span class="material-symbols-outlined text-primary-container">terminal</span><input class="w-full bg-transparent font-code-md text-code-md text-primary placeholder-outline-variant focus:outline-none" placeholder="Type an agent subroutine or system command..." type="text"/><button class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary px-2 py-1 rounded bg-surface-container-lowest border border-outline-variant/30" onclick="document.getElementById('hud-command-palette').classList.add('hidden')">ESC</button></div><div class="p-space-md space-y-space-xs"><div class="font-label-mono text-label-mono text-outline px-space-sm mb-space-xs">QUICK SUBROUTINES</div><div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container cursor-pointer font-body-sm text-body-sm text-on-surface hover:text-primary"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">sync_alt</span> Dispatch Triage Multi-Agent</span><span class="font-label-mono text-label-mono text-outline">AGENT://DISPATCH</span></div><div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container cursor-pointer font-body-sm text-body-sm text-on-surface hover:text-primary"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">layers</span> Render 3D Topology Mesh</span><span class="font-label-mono text-label-mono text-outline">VIEW://TOPOLOGY</span></div></div></div></div></body></html>
